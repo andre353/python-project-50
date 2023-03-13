@@ -11,7 +11,7 @@ package-install:
 	python3 -m pip install dist/*.whl
 
 package-uninstall:
-	python3 -m pip uninstall hexlet-code
+	python3 -m pip uninstall dist/*.whl
 
 gendiff:
 	poetry run gendiff

@@ -22,7 +22,7 @@ def generate_diff(file_path1, file_path2):
         else:
             result_diff.append(f"- {key}: {low_value(val1)}")
             result_diff.append(f"+ {key}: {low_value(val2)}")
-    
+
     return '{\n' + '\n'.join(result_diff) + '\n}'
 
 
