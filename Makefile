@@ -1,7 +1,7 @@
 install:
 	poetry install
 
-build:
+build: check
 	poetry build
 
 publish:
@@ -19,7 +19,12 @@ gendiff:
 lint:
 	poetry run flake8 gendiff
 
+selfcheck:
+	poetry check
+
+check: selfcheck test lint	
+
 test:
 	poetry run pytest
 
-.PHONY: install build publish package-install gendiff lint test
+.PHONY: install build publish package-install gendiff lint selfcheck check test
